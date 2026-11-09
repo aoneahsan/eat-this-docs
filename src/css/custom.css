@@ -1,0 +1,24 @@
+/* Eat This docs: the app's Haldi treatment (hue 59) on cream paper. */
+:root {
+  --ifm-color-primary: #a65c0f;
+  --ifm-color-primary-dark: #95530e;
+  --ifm-color-primary-darker: #8d4e0d;
+  --ifm-color-primary-darkest: #74400b;
+  --ifm-color-primary-light: #b76511;
+  --ifm-color-primary-lighter: #bf6a11;
+  --ifm-color-primary-lightest: #d97814;
+  --ifm-background-color: #fbf6ef;
+  --ifm-font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ifm-heading-font-family: 'Iowan Old Style', Georgia, serif;
+  --ifm-code-font-size: 95%;
+}
+[data-theme='dark'] {
+  --ifm-color-primary: #e3a35c;
+  --ifm-color-primary-dark: #df9442;
+  --ifm-color-primary-darker: #dd8c35;
+  --ifm-color-primary-darkest: #c8761f;
+  --ifm-color-primary-light: #e7b276;
+  --ifm-color-primary-lighter: #e9ba83;
+  --ifm-color-primary-lightest: #efcdaa;
+  --ifm-background-color: #241b14;
+}
