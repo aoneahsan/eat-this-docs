@@ -4,15 +4,16 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
+    "start": "docusaurus start --port 5928",
+    "build": "yarn sync:hub && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
+    "serve": "docusaurus serve --port 5928",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "sync:hub": "node -e \"require('fs').copyFileSync('../eat-this/docs/comparison-hub/competitors.json','src/data/competitors.json')\""
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",
