@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# AI answer engines are welcome on every page.
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://eatthis-docs.aoneahsan.com/sitemap.xml
