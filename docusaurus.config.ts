@@ -79,8 +79,8 @@ const config: Config = {
     footer: {
       style: 'light',
       links: [
-        { title: 'Guide', items: [{ label: 'Start here', to: '/guide/start' }, { label: 'How we rank', to: '/guide/ranking' }, { label: 'Sources', to: '/guide/sources' }] },
-        { title: 'App', items: [{ label: 'Eat This', href: 'https://eatthis.aoneahsan.com' }, { label: 'Privacy', href: 'https://eatthis.aoneahsan.com/privacy' }, { label: 'Terms', href: 'https://eatthis.aoneahsan.com/terms' }] },
+        { title: 'Guide', items: [{ label: 'Start here', to: '/guide/start' }, { label: 'How we rank', to: '/guide/ranking' }, { label: 'Sources', to: '/guide/sources' }, { label: 'White-label', to: '/guide/white-label/overview' }] },
+        { title: 'App', items: [{ label: 'Eat This', href: 'https://eatthis.aoneahsan.com' }, { label: 'Privacy', href: 'https://eatthis.aoneahsan.com/privacy' }, { label: 'Terms', href: 'https://eatthis.aoneahsan.com/terms' }, { label: 'White-label pricing', href: 'https://eatthis.aoneahsan.com/white-label/pricing' }] },
       ],
       copyright: `© ${new Date().getFullYear()} Eat This. A suggestion, not a diagnosis.`,
     },
