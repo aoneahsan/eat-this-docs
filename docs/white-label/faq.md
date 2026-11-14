@@ -24,5 +24,6 @@ record, like every food already in Eat This.
 Your copy keeps running on the version it has. [Renew](./updates.md) to keep getting new foods and fixes.
 
 **How do I pay?**
-On the [pricing page](https://eatthis.aoneahsan.com/white-label/pricing). Until card payment opens there, send the
-form and we reply with an invoice.
+By bank transfer to our Wise account. Start on the [pricing page](https://eatthis.aoneahsan.com/white-label/pricing):
+it opens a payment page with our account details and your reference. Once we've confirmed the transfer, your licence
+key and certificate come by email.
