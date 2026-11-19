@@ -27,5 +27,9 @@ anyone's settings.
 
 ## Deleting your account
 
-**Settings → Delete account** removes your profile, favourites, reminders and usage straight away. A paid plan stops
-renewing. What's saved on your phone stays until you clear it with **Clear everything on this device**.
+Open [Delete your account](https://eatthis.aoneahsan.com/delete-account), sign in with Google if you aren't already,
+type **delete** and press **Delete my account for good**. Your profile, favourites, reminders, usage, invite rewards and
+Family place go straight away, and a paid plan ends with the account. In the Android app, tap the person icon at the top,
+then **Delete my account**. Payment records Polar must keep by law stay with Polar, no longer linked to you. What's saved
+on your phone stays until you clear it with **Clear everything on this device**. Can't get into the Google account? Write
+to aoneahsan@gmail.com with the address the account used; it is deleted within 30 days.
