@@ -5,6 +5,7 @@ import { execSync } from 'node:child_process';
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { Plugin } from '@docusaurus/types';
+import { OTHER_PLATFORMS } from './src/data/platforms';
 
 const SITE = 'https://eatthis-docs.aoneahsan.com';
 interface FeedItem { title: string; description: string; url: string; date: string }
@@ -73,14 +74,23 @@ const config: Config = {
       logo: { alt: 'Eat This', src: 'img/logo.svg' },
       items: [
         { type: 'docSidebar', sidebarId: 'guide', position: 'left', label: 'Guide' },
-        { href: 'https://eatthis.aoneahsan.com', label: 'Open the app', position: 'right' },
+        {
+          type: 'dropdown',
+          label: 'Get Eat This',
+          position: 'right',
+          items: [
+            ...OTHER_PLATFORMS.map((platform) => ({ label: platform.name, href: platform.href })),
+            { label: 'All apps', to: '/apps' },
+          ],
+        },
       ],
     },
     footer: {
       style: 'light',
       links: [
+        { title: 'Get Eat This', items: [...OTHER_PLATFORMS.map((platform) => ({ label: platform.name, href: platform.href })), { label: 'All apps', to: '/apps' }] },
         { title: 'Guide', items: [{ label: 'Start here', to: '/guide/start' }, { label: 'How we rank', to: '/guide/ranking' }, { label: 'Sources', to: '/guide/sources' }, { label: 'White-label', to: '/guide/white-label/overview' }] },
-        { title: 'App', items: [{ label: 'Eat This', href: 'https://eatthis.aoneahsan.com' }, { label: 'Privacy', href: 'https://eatthis.aoneahsan.com/privacy' }, { label: 'Terms', href: 'https://eatthis.aoneahsan.com/terms' }, { label: 'White-label pricing', href: 'https://eatthis.aoneahsan.com/white-label/pricing' }] },
+        { title: 'App', items: [{ label: 'Privacy', href: 'https://eatthis.aoneahsan.com/privacy' }, { label: 'Terms', href: 'https://eatthis.aoneahsan.com/terms' }, { label: 'White-label pricing', href: 'https://eatthis.aoneahsan.com/white-label/pricing' }] },
       ],
       copyright: `© ${new Date().getFullYear()} Eat This. A suggestion, not a diagnosis.`,
     },

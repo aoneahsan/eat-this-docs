@@ -1,5 +1,6 @@
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
+import { PRIMARY_PLATFORM } from '@site/src/data/platforms';
 
 export default function Home() {
   return (
@@ -10,7 +11,8 @@ export default function Home() {
         <p>This guide explains how it works: how foods are ranked, where every number comes from, how sure we are about each suggestion, and what the app keeps about you.</p>
         <div className="margin-top--lg">
           <Link className="button button--primary button--lg margin-right--sm" to="/guide/start">Start here</Link>
-          <Link className="button button--secondary button--lg" href="https://eatthis.aoneahsan.com">Open the app</Link>
+          <Link className="button button--secondary button--lg" href={PRIMARY_PLATFORM.href}>Open the app</Link>
+          <p className="margin-top--md">Get Eat This: <Link href={PRIMARY_PLATFORM.href}>{PRIMARY_PLATFORM.name}</Link> · <Link to="/apps">All apps →</Link></p>
         </div>
         <ul className="margin-top--xl">
           <li><strong>128 whole foods</strong>, every value linked to USDA FoodData Central or IFCT 2017.</li>
