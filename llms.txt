@@ -1,0 +1,20 @@
+# Eat This Guide
+
+> Eat This names the plain food that does what you asked for — a nutrient, a feeling or the time of day — with the number for one serving, a cheap pick, and when it is a question for your doctor instead.
+
+## Get Eat This
+
+- [All apps](https://eatthis-docs.aoneahsan.com/apps): every released surface of Eat This.
+- [Eat This web app](https://eatthis.aoneahsan.com): runs in any browser on a phone or computer.
+
+## Guide
+
+- [Start here](https://eatthis-docs.aoneahsan.com/guide/start)
+- [How we rank](https://eatthis-docs.aoneahsan.com/guide/ranking)
+- [Sources](https://eatthis-docs.aoneahsan.com/guide/sources)
+- [Evidence and safety](https://eatthis-docs.aoneahsan.com/guide/evidence-and-safety)
+- [Ask and Speak](https://eatthis-docs.aoneahsan.com/guide/ask)
+- [Daily plan](https://eatthis-docs.aoneahsan.com/guide/daily-plan)
+- [Filters](https://eatthis-docs.aoneahsan.com/guide/filters)
+- [Questions](https://eatthis-docs.aoneahsan.com/guide/faq)
+- [Other apps compared](https://eatthis-docs.aoneahsan.com/guide/compare)
