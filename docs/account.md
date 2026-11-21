@@ -14,6 +14,13 @@ Press **Continue with Google** on the [sign-in page](https://eatthis.aoneahsan.c
 phone's own Google account sheet opens instead. The first time you sign in, what you had saved on that device goes up
 to your account; after that, each device follows the account.
 
+## Two-step sign-in and other apps
+
+Under **Settings → Security** you can add a code from your phone to every sign-in: see
+[Two-step sign-in](./developers/two-step-sign-in.md). Under **Settings → Other apps** you can let a script, Claude or
+ChatGPT, your own server or your calendar use your favourites and reminder times: see
+[Eat This for developers](./developers/index.md).
+
 ## Invite friends
 
 Your account page has an invite link. Every 3 friends who sign up with it and confirm their email earn you a month of
