@@ -18,3 +18,14 @@
 - [Filters](https://eatthis-docs.aoneahsan.com/guide/filters)
 - [Questions](https://eatthis-docs.aoneahsan.com/guide/faq)
 - [Other apps compared](https://eatthis-docs.aoneahsan.com/guide/compare)
+
+## Developers
+
+- [Eat This for developers](https://eatthis-docs.aoneahsan.com/guide/developers): what outside apps can reach, and plan limits.
+- [Access keys](https://eatthis-docs.aoneahsan.com/guide/developers/access-keys)
+- [The API](https://eatthis-docs.aoneahsan.com/guide/developers/api)
+- [Assistants (MCP)](https://eatthis-docs.aoneahsan.com/guide/developers/assistants)
+- [Webhooks](https://eatthis-docs.aoneahsan.com/guide/developers/webhooks)
+- [Calendar feed](https://eatthis-docs.aoneahsan.com/guide/developers/calendar-feed)
+- [Two-step sign-in](https://eatthis-docs.aoneahsan.com/guide/developers/two-step-sign-in)
+- [OpenAPI](https://mbznqopsynqehmpddwbr.supabase.co/functions/v1/api/v1/openapi.json)
