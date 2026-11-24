@@ -3,7 +3,7 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import { execSync } from 'node:child_process';
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, sep } from 'node:path';
 import type { Plugin } from '@docusaurus/types';
 import { OTHER_PLATFORMS } from './src/data/platforms';
 
@@ -16,7 +16,8 @@ function guideItems(): FeedItem[] {
   return walk('docs').map((f) => {
     const text = readFileSync(f, 'utf8');
     const fm = (k: string) => (text.match(new RegExp(`^${k}:\\s*['"]?(.*?)['"]?\\s*$`, 'm'))?.[1] ?? '');
-    const slug = f.replace(/^docs\//, '').replace(/\.mdx?$/, '').replace(/\/index$/, '');
+    // URL slugs use '/', whatever separator the OS gave the walk (Windows builds wrote /guide/docs\x).
+    const slug = f.split(sep).join('/').replace(/^docs\//, '').replace(/\.mdx?$/, '').replace(/\/index$/, '');
     let date = '';
     try { date = execSync(`git log -1 --format=%cI -- "${f}"`).toString().trim(); } catch { /* untracked file */ }
     return { title: fm('title'), description: fm('description'), url: `${SITE}/guide/${slug}`, date: date || new Date().toISOString() };
