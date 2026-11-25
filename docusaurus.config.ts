@@ -3,8 +3,8 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import { execSync } from 'node:child_process';
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { join, sep } from 'node:path';
-import type { Plugin } from '@docusaurus/types';
+import { join, relative, sep } from 'node:path';
+import type { LoadContext, Plugin } from '@docusaurus/types';
 import { OTHER_PLATFORMS } from './src/data/platforms';
 
 const SITE = 'https://eatthis-docs.aoneahsan.com';
@@ -27,12 +27,15 @@ function guideItems(): FeedItem[] {
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 /** The /feed page and /feed.xml (RSS 2.0) every frontend ships, built from the guide itself. */
-function feedPlugin(): Plugin {
+function feedPlugin({ generatedFilesDir }: LoadContext): Plugin {
   return {
     name: 'eatthis-guide-feed',
     loadContent: async () => guideItems(),
     async contentLoaded({ content, actions }) {
-      const items = await actions.createData('feed-items.json', JSON.stringify(content as FeedItem[]));
+      const dataFile = await actions.createData('feed-items.json', JSON.stringify(content as FeedItem[]));
+      // The route registry ships each module path in the client bundle; an absolute path would publish this
+      // machine's folders and give every machine different chunk names, so pass it through the @generated alias.
+      const items = `@generated/${relative(generatedFilesDir, dataFile).split(sep).join('/')}`;
       actions.addRoute({ path: '/feed', component: '@site/src/components/FeedPage.tsx', modules: { items }, exact: true });
     },
     async postBuild({ outDir, content }) {
