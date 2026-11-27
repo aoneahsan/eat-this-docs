@@ -5,6 +5,9 @@ Newest entry first. One section per issue. Not a page: `docusaurus.config.ts` ex
 
 ## eat-this-docs#1 — eatthis: indexing issues found in Google/Bing/Yandex audit · 2026-11-27 · commit: (filled by the commit that ships this entry)
 
+Live-verified 2026-11-27 (IndexNow 200): Yandex meta present; `/guide/reminders` → 301 → 200; WebSite, Person, Organization and
+SoftwareApplication in the home page's raw HTML; og:image set. Yandex Verify is pressed by the daily audit.
+
 Status: **built and contract-verified locally; publish to gh-pages, live proof, Yandex Verify and IndexNow pending**.
 
 The app boxes of this issue (thin home page, publisher and sameAs, og:image on `eatthis.aoneahsan.com`) are fixed in
