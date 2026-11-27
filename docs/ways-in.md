@@ -9,12 +9,13 @@ description: Now, I need…, I'm feeling… and Search, and what each one shows 
 
 Eat This reads your phone's clock and shows three to five foods for the time slot: early morning, breakfast,
 mid-morning, lunch, afternoon, evening or late night. Each slot leads with one nutrient. Breakfast leads with protein,
-mid-morning with vitamin C, lunch with iron. You can look ahead to any other slot.
+mid-morning with vitamin C, lunch with iron. You can look ahead to any other slot. The same picks are what
+[reminders name at the times you choose](./reminders.md).
 
 ## I need…
 
 Ten nutrients: protein, vitamin B12, omega-3, vitamin C, iron, calcium, magnesium, fibre, zinc and vitamin D.
-Each page opens with three rows (see [How we rank](./ranking)) and then the top 10.
+Each page opens with three rows (see [How we rank](./ranking.md)) and then the top 10.
 
 Omega-3 has two tabs. **Plant (ALA)** covers foods like flax and chia. **Fish (EPA + DHA)** covers foods like mackerel
 and salmon. They aren't the same thing, so we don't mix them.
@@ -22,7 +23,7 @@ and salmon. They aren't the same thing, so we don't mix them.
 ## I'm feeling…
 
 Ten everyday feelings, such as bloated, low energy, can't sleep or after a workout. Each page asks about warning signs
-first. See [Evidence and safety](./evidence-and-safety).
+first. See [Evidence and safety](./evidence-and-safety.md).
 
 ## Search
 

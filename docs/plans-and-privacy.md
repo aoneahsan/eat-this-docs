@@ -13,7 +13,7 @@ Everything to read is free: every food, list, comparison and warning sign, signe
 |---|---|---|---|
 | Price | free | $9.99 a month | $8.99 per person a month, from 3 people |
 | Questions a day | 3 as a guest, 10 signed in | 50 | 60 each |
-| Reminder times | 3 | 8 | 8 each |
+| [Reminder times](./reminders.md) | 3 | 8 | 8 each |
 | Daily plan | no | yes | yes |
 
 Every 3 friends who sign up with your link and confirm their email earn you a month of Plus, up to 6 months a year.

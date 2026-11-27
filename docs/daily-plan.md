@@ -14,4 +14,5 @@ breakfast, mid-morning, lunch, the afternoon and the evening.
 - **Swap** moves one meal to its next pick.
 - Under the meals, the day's protein, fibre, iron, calcium and vitamin C are added up against a day's need.
 
-On Free you can see today's plan as a preview.
+On Free you can see today's plan as a preview. To be nudged at those times instead of opening the plan, set
+[reminder times](./reminders.md): each names the top pick for its part of the day.

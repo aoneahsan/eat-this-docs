@@ -4,28 +4,33 @@
 
 ## Get Eat This
 
-- [All apps](https://eatthis-docs.aoneahsan.com/apps): every released surface of Eat This.
+- [All apps](https://eatthis-docs.aoneahsan.com/apps/): every released surface of Eat This.
 - [Eat This web app](https://eatthis.aoneahsan.com): runs in any browser on a phone or computer.
 
 ## Guide
 
-- [Start here](https://eatthis-docs.aoneahsan.com/guide/start)
-- [How we rank](https://eatthis-docs.aoneahsan.com/guide/ranking)
-- [Sources](https://eatthis-docs.aoneahsan.com/guide/sources)
-- [Evidence and safety](https://eatthis-docs.aoneahsan.com/guide/evidence-and-safety)
-- [Ask and Speak](https://eatthis-docs.aoneahsan.com/guide/ask)
-- [Daily plan](https://eatthis-docs.aoneahsan.com/guide/daily-plan)
-- [Filters](https://eatthis-docs.aoneahsan.com/guide/filters)
-- [Questions](https://eatthis-docs.aoneahsan.com/guide/faq)
-- [Other apps compared](https://eatthis-docs.aoneahsan.com/guide/compare)
+- [Start here](https://eatthis-docs.aoneahsan.com/guide/start/)
+- [How we rank](https://eatthis-docs.aoneahsan.com/guide/ranking/)
+- [Sources](https://eatthis-docs.aoneahsan.com/guide/sources/)
+- [Evidence and safety](https://eatthis-docs.aoneahsan.com/guide/evidence-and-safety/)
+- [Ask and Speak](https://eatthis-docs.aoneahsan.com/guide/ask/)
+- [Daily plan](https://eatthis-docs.aoneahsan.com/guide/daily-plan/)
+- [Reminders](https://eatthis-docs.aoneahsan.com/guide/reminders/): one food and one reason at the times you choose, from the phone, never inside quiet hours
+- [Filters](https://eatthis-docs.aoneahsan.com/guide/filters/)
+- [Questions](https://eatthis-docs.aoneahsan.com/guide/faq/)
+- [Other apps compared](https://eatthis-docs.aoneahsan.com/guide/compare/)
 
 ## Developers
 
-- [Eat This for developers](https://eatthis-docs.aoneahsan.com/guide/developers): what outside apps can reach, and plan limits.
-- [Access keys](https://eatthis-docs.aoneahsan.com/guide/developers/access-keys)
-- [The API](https://eatthis-docs.aoneahsan.com/guide/developers/api)
-- [Assistants (MCP)](https://eatthis-docs.aoneahsan.com/guide/developers/assistants)
-- [Webhooks](https://eatthis-docs.aoneahsan.com/guide/developers/webhooks)
-- [Calendar feed](https://eatthis-docs.aoneahsan.com/guide/developers/calendar-feed)
-- [Two-step sign-in](https://eatthis-docs.aoneahsan.com/guide/developers/two-step-sign-in)
+- [Eat This for developers](https://eatthis-docs.aoneahsan.com/guide/developers/): what outside apps can reach, and plan limits.
+- [Access keys](https://eatthis-docs.aoneahsan.com/guide/developers/access-keys/)
+- [The API](https://eatthis-docs.aoneahsan.com/guide/developers/api/)
+- [Assistants (MCP)](https://eatthis-docs.aoneahsan.com/guide/developers/assistants/)
+- [Webhooks](https://eatthis-docs.aoneahsan.com/guide/developers/webhooks/)
+- [Calendar feed](https://eatthis-docs.aoneahsan.com/guide/developers/calendar-feed/)
+- [Two-step sign-in](https://eatthis-docs.aoneahsan.com/guide/developers/two-step-sign-in/)
 - [OpenAPI](https://mbznqopsynqehmpddwbr.supabase.co/functions/v1/api/v1/openapi.json)
+
+## Who builds this
+
+Eat This and this guide are made by Ahsan Mahmood (aoneahsan), founder and developer of Zaions. More of his products: [aoneahsan.com](https://aoneahsan.com) · [zaions.com](https://zaions.com).

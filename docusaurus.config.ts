@@ -6,6 +6,7 @@ import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import type { LoadContext, Plugin } from '@docusaurus/types';
 import { OTHER_PLATFORMS } from './src/data/platforms';
+import { PUBLISHER_GRAPH } from './src/data/publisher';
 
 const SITE = 'https://eatthis-docs.aoneahsan.com';
 interface FeedItem { title: string; description: string; url: string; date: string }
@@ -20,7 +21,7 @@ function guideItems(): FeedItem[] {
     const slug = f.split(sep).join('/').replace(/^docs\//, '').replace(/\.mdx?$/, '').replace(/\/index$/, '');
     let date = '';
     try { date = execSync(`git log -1 --format=%cI -- "${f}"`).toString().trim(); } catch { /* untracked file */ }
-    return { title: fm('title'), description: fm('description'), url: `${SITE}/guide/${slug}`, date: date || new Date().toISOString() };
+    return { title: fm('title'), description: fm('description'), url: `${SITE}/guide/${slug}/`, date: date || new Date().toISOString() };
   }).filter((i) => i.title).sort((a, b) => b.date.localeCompare(a.date));
 }
 
@@ -55,16 +56,31 @@ const config: Config = {
   organizationName: 'aoneahsan',
   projectName: 'eat-this-docs',
   deploymentBranch: 'gh-pages',
-  trailingSlash: false,
+  // Every page is `<route>/index.html`: GitHub Pages then 301s `/x` to `/x/`. With `false` it wrote `x.html` and 404ed
+  // every slashed address (eat-this-docs#1, SA-P26). plugins/seo-contract.mts fails the build if this goes back.
+  trailingSlash: true,
   onBrokenLinks: 'throw',
+  onBrokenAnchors: 'throw',
   i18n: { defaultLocale: 'en-GB', locales: ['en-GB'] },
   markdown: { hooks: { onBrokenMarkdownLinks: 'throw' } },
+  headTags: [
+    // The publisher on every page (eat-this-docs#1 AEO): the owner and Zaions, with the profiles in
+    // projects-finalization-record/ecosystem/owner-profile.json (the same list aoneahsan.com carries), the guide as a
+    // WebSite, and the product it describes with its real plans (eat-this/src/lib/plans.ts, the app's /pricing).
+    { tagName: 'script', attributes: { type: 'application/ld+json' }, innerHTML: JSON.stringify(PUBLISHER_GRAPH) },
+  ],
   plugins: [feedPlugin],
   presets: [
     [
       'classic',
       {
-        docs: { routeBasePath: 'guide', sidebarPath: './sidebars.ts' },
+        docs: {
+          routeBasePath: 'guide',
+          sidebarPath: './sidebars.ts',
+          // `exclude` replaces the plugin defaults, so they are restated. docs/search-consoles/ is the fleet's
+          // fixed-path record of search-console work (fix-log.md), never a page.
+          exclude: ['**/_*.{js,jsx,ts,tsx,md,mdx}', '**/_*/**', '**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**', 'search-consoles/**'],
+        },
         blog: false,
         theme: { customCss: './src/css/custom.css' },
         sitemap: { lastmod: 'date', changefreq: null, priority: null },
@@ -72,6 +88,15 @@ const config: Config = {
     ],
   ],
   themeConfig: {
+    // The product's own 1200 x 630 share card (eat-this/brand-kit/share-1200x630.svg), og:image and twitter:image of every page.
+    image: 'img/eat-this-share-1200x630.png',
+    metadata: [
+      // Yandex Webmaster ownership (eat-this-docs#1 box 1): the same key the other docs sites carry.
+      { name: 'yandex-verification', content: 'bfb02722189028cf' },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+      { property: 'og:image:alt', content: 'Eat This, and here’s why: three food cards for protein, the best, the best cheap one and the one worth paying more for, each with grams per serving.' },
+    ],
     colorMode: { respectPrefersColorScheme: true },
     navbar: {
       title: 'Eat This',
@@ -93,7 +118,7 @@ const config: Config = {
       style: 'light',
       links: [
         { title: 'Get Eat This', items: [...OTHER_PLATFORMS.map((platform) => ({ label: platform.name, href: platform.href })), { label: 'All apps', to: '/apps' }] },
-        { title: 'Guide', items: [{ label: 'Start here', to: '/guide/start' }, { label: 'How we rank', to: '/guide/ranking' }, { label: 'Sources', to: '/guide/sources' }, { label: 'Developers', to: '/guide/developers' }, { label: 'White-label', to: '/guide/white-label/overview' }] },
+        { title: 'Guide', items: [{ label: 'Start here', to: '/guide/start' }, { label: 'How we rank', to: '/guide/ranking' }, { label: 'Sources', to: '/guide/sources' }, { label: 'Developers', to: '/guide/developers' }, { label: 'White-label', to: '/guide/white-label/overview' }, { label: "What's changed", to: '/feed' }] },
         { title: 'App', items: [{ label: 'Privacy', href: 'https://eatthis.aoneahsan.com/privacy' }, { label: 'Terms', href: 'https://eatthis.aoneahsan.com/terms' }, { label: 'White-label pricing', href: 'https://eatthis.aoneahsan.com/white-label/pricing' }] },
       ],
       copyright: `© ${new Date().getFullYear()} Eat This. A suggestion, not a diagnosis.`,

@@ -7,13 +7,13 @@ description: Short answers to the questions people ask most.
 
 **Is one amla really worth four oranges?**
 Gram for gram it's worth 4.7. Fruit for fruit it's about one, because a market amla weighs about a quarter of an
-orange. See [Where the numbers come from](./sources).
+orange. See [Where the numbers come from](./sources.md).
 
 **How many eggs give 30 g of protein?**
 About 5. One large egg gives 6.3 g.
 
 **Why isn't my favourite healthy food on the protein list?**
-A food counts only if one serving gives at least 5% of a day's need. See [How we rank](./ranking).
+A food counts only if one serving gives at least 5% of a day's need. See [How we rank](./ranking.md).
 
 **Do you sell supplements?**
 No. Eat This lists whole foods only, and takes no money from food brands.

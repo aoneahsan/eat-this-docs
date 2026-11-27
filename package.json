@@ -5,7 +5,8 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start --port 5928",
-    "build": "yarn sync:hub && NODE_OPTIONS=--no-experimental-webstorage docusaurus build",
+    "build": "yarn sync:hub && NODE_OPTIONS=--no-experimental-webstorage docusaurus build && yarn seo:contract",
+    "seo:contract": "node plugins/seo-contract.mts",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

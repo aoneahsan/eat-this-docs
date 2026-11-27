@@ -29,7 +29,7 @@ Plus, up to 6 months a year. A month earned this way is added on top of any plan
 ## Family
 
 On Family, the person who pays invites the others by email from **Account → Family**. Each person signs in with Google
-using that email address and keeps their own diet, reminders and favourites. The owner sees who has joined, never
+using that email address and keeps their own diet, [reminder times](./reminders.md) and favourites. The owner sees who has joined, never
 anyone's settings.
 
 ## Deleting your account

@@ -35,7 +35,7 @@ https://mbznqopsynqehmpddwbr.supabase.co/functions/v1/api/v1/calendar/FEED_ID.ic
 
 Move, add or turn off a reminder time in Eat This and the calendar follows the next time your app checks. Calendar apps
 choose how often that is, and some wait hours between checks. The reminders themselves still come as
-notifications on your phone; the calendar is another place to see them.
+notifications on your phone ([how reminders work](../reminders.md)); the calendar is another place to see them.
 
 ## Keeping it private
 
